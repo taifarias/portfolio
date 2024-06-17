@@ -41,12 +41,13 @@ a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    width: 100vw;
+    
 }
 
 #title {
     display: grid;
-    place-content: center; 
-    
+    place-content: center;     
     background-image: url(img/bg.png);  
  }
 
@@ -54,6 +55,7 @@ a:hover {
     width: 700px;
     height: auto;
     margin-top: 200px;
+    display: grid;
  }
 
  #startButton {    
@@ -83,28 +85,40 @@ a:hover {
 #projects{
     background-image: url(img/bg3.png);
     display: grid;
-    grid-template-rows: auto auto; /* Duas linhas automáticas */
-    grid-template-columns: 1fr 1fr 1fr; /* Três colunas de largura igual */
-    
+   
 }
+h2 {
+    margin-left: 50px;
+    padding-top: 50px;
+    font-family: "Nanum Bold";
+    font-size: 3em;
+    letter-spacing: 0.3em;
+    color: #C1FF72;
+    grid-row: 1; /* Ocupa a primeira linha */
+    grid-column: span 3; /* Ocupa todas as três colunas */
 
+}
 .games {
     background-color: #C1FF72;
-    width: 480px;
-    height: 550px;
+    width: 380px;
+    height: 450px;
     margin-top: 50px;
-    margin-left: 20px;
+   
     border-radius: 5%;
     border-color: black;
     border-width: 3px;
-    border-style: solid;    
-    place-items: center ;
+    border-style: solid; 
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr; /* Três colunas de largura igual */
+    
     padding-top: 30px;    
     padding-bottom: 50px;
     
 }
+.games1 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 .games1:hover{
     animation: animation 0.2s;
     transform: scale(1.1);    
@@ -118,55 +132,46 @@ a:hover {
     transform: scale(1.1);    
 }
 
-h2 {
-    margin-left: 50px;
-    padding-top: 50px;
-    font-family: "Nanum Bold";
-    font-size: 3em;
-    letter-spacing: 0.3em;
-    color: #C1FF72;
-    grid-row: 1; /* Ocupa a primeira linha */
-    grid-column: span 3; /* Ocupa todas as três colunas */
-
-}
-
 .games h3{
-    
     font-family: "Nanum Bold";
     font-size:2em;
-    color: rgb(0,109,102);
-    margin-top: -80px;
-    
+    color: rgb(0,109,102);   
+    padding-left: 40px;
 }
 
 .games p {
-    font-family: "Nanum Bold";
-    
+    font-family: "Nanum Bold";    
     padding-left: 40px;
     padding-right: 20px;
-    margin-top: -170px;
-    
+}
 
+.games1 a {
+    grid-row: 4; /* Ocupa a primeira linha */
+    grid-column: span 0.5;
 }
 
 #bird {
-    width: 430px;
+    width: 330px;
     height: auto;
+    margin-left: 1.5vw;
+    
     border-radius: 5%; 
     
 }
 
 
 #loja {
-    width: 430px; 
+    width: 330px; 
     height: auto;
     border-radius: 5%; 
+    margin-left: 1.5vw;
 }
 
 #calculadora {
-    width: 430px;    
+    width: 330px;    
     height: auto;
     border-radius: 5%; 
+    margin-left: 1.5vw;
 }
 
 
@@ -202,8 +207,8 @@ h2 {
 
 
 .bio{
-    margin-left: 300px;
     margin-top: 50px;
+    margin-left: 15%;
     width: 900px;
     height: 500px;
     border-radius: 5%;
@@ -308,4 +313,123 @@ textarea {
     line-height: 20px;
     max-width: 400px;
 }
+
+
+@media (max-width: 1024px){
+
+#portfolio {
+    width: 600px;    
+}
+
+.bio {
+    margin-left: 130px;
+    width: 600px;
+    height: 750px;
+    overflow: hidden;
+    padding: 10px;
+    grid-template-columns: 1fr; 
+}
+
+}
+
+
+
+
+@media (max-width: 450px) { /* celular */
+    #portfolio {
+        width: 300px;
+        margin-left: 10px;  
+        }
+    #startButton{
+        margin-left: 100px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    .bio {
+        margin-left: 30px;
+        width: 300px;
+        height: 650px;
+        overflow: hidden;
+        padding: 10px;
+        grid-template-columns: 1fr; 
+    }
+    .bio h3{
+        font-size: 19px;
+    }
+    .bio p {
+        font-size: 15px;
+        padding-right: 50px;
+        padding-top: 5px;
+    }
+   .bio2 {
+    padding-left: 0;
+   }
+   .bio2 h3{
+    padding-top: 10px;
+
+   }
+   .bio2 img{
+    padding: 0;
+    width: 80px;
+   }
+   .progress-container {
+    width: 250px;
+   }
+
+   .progress-bar{
+    padding-left: 50px;
+   }
+
+
+   .games{
+    width: 300px;
+    margin-left: 40px;
+   }
+   #bird{
+    width: 280px;
+    padding: 0;
+   }
+   .games h3{
+    font-size: 25px;
+    
+    padding: 30px;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100vw ;
+    overflow: hidden;
+    }
+
+
+form {    
+    margin-left: 30px;
+    margin-top: 50px; 
+   }
+
+input, textarea {
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 300px;
+}
+
+
+}
+
 
