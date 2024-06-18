@@ -40,8 +40,8 @@ a:hover {
 .section {
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     
 }
 
@@ -315,31 +315,21 @@ textarea {
 }
 
 
-@media (max-width: 1024px){
 
-#portfolio {
-    width: 600px;    
-}
-
-.bio {
-    margin-left: 130px;
-    width: 600px;
-    height: 750px;
-    overflow: hidden;
-    padding: 10px;
-    grid-template-columns: 1fr; 
-}
-
-}
+@media (max-width: 480px) { 
+    .section{
+        max-width: 480px;
+    }
+    body {
+        overflow-x: hidden;
+    }
 
 
-
-
-@media (max-width: 450px) { /* celular */
     #portfolio {
         width: 300px;
-        margin-left: 10px;  
+         
         }
+
     #startButton{
         margin-left: 100px;
     }
@@ -399,17 +389,6 @@ textarea {
    }
 
 
-
-
-
-
-
-
-
-
-
-
-
     #projects {
     display: grid;
     grid-template-columns: 1fr;
@@ -432,4 +411,23 @@ input, textarea {
 
 }
 
+@media (max-width: 768px) and  (min-width: 481px) {
+   *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+   }
+   
+    .section{                 
+         width: 140%; /*sei nao como foi isso */               
+    }
+    
+    .bio{
+        margin-left: 30px;
+        padding-bottom: 0;              
+    }
 
+    .games{
+        transform: scale(0.5);
+    }
+}
