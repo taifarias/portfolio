@@ -104,6 +104,7 @@ h2 {
     width: 380px;
     height: 450px;
     margin-top: 50px;
+    margin-left: 30px;
    
     border-radius: 5%;
     border-color: black;
@@ -112,13 +113,31 @@ h2 {
     display: grid;
     
     padding-top: 30px;    
-    padding-bottom: 50px;
-    
+    padding-bottom: 50px;    
+}
+.games h3{
+    font-family: "Nanum Bold";
+    font-size:2em;
+    color: rgb(0,109,102);   
+    padding-left: 40px;
+}
+
+.games p {
+    font-family: "Nanum Bold";    
+    padding-left: 40px;
+    padding-right: 20px;
+    margin-top: 15px;
 }
 .games1 {
     display: grid;
     grid-template-columns: 1fr;
 }
+
+.games1 a {
+    grid-row: 4; /* Ocupa a primeira linha */
+    grid-column: span 0.5;
+}
+
 
 .games1:hover{
     animation: animation 0.2s;
@@ -133,46 +152,22 @@ h2 {
     transform: scale(1.1);    
 }
 
-.games h3{
-    font-family: "Nanum Bold";
-    font-size:2em;
-    color: rgb(0,109,102);   
-    padding-left: 40px;
+.games4:hover{
+    animation: animation 0.2s;
+    transform: scale(1.1);    
 }
 
-.games p {
-    font-family: "Nanum Bold";    
-    padding-left: 40px;
-    padding-right: 20px;
-}
 
-.games1 a {
-    grid-row: 4; /* Ocupa a primeira linha */
-    grid-column: span 0.5;
-}
-
-#bird {
+.imgGames{
     width: 330px;
     height: auto;
-    margin-left: 1.5vw;
-    
+    margin-left: 1.5vw;    
     border-radius: 5%; 
-    
 }
 
-
-#loja {
-    width: 330px; 
-    height: auto;
-    border-radius: 5%; 
-    margin-left: 1.5vw;
-}
-
-#calculadora {
-    width: 330px;    
-    height: auto;
-    border-radius: 5%; 
-    margin-left: 1.5vw;
+.containerButtons {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 
@@ -182,20 +177,20 @@ h2 {
     border-radius: 30px;
     box-shadow: #422800 0px 4px 0 0;
     color: #422800;
-    cursor: pointer;
-    display: inline-block;
+    cursor: pointer;    
     font-family: 'nanum bold';
     font-weight: 400;
     font-size: 18px;
     padding: 0 18px;
+    height: 40px;
     line-height: 40px;
     text-align: center;
     text-decoration: none;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    margin-left: 60px;
-    margin-right: 80px;
+   
+
 
   }  
   .buttons:hover {
